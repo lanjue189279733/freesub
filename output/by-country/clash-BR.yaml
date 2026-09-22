@@ -6,9 +6,9 @@ log-level: info
 proxies:
 - name: 🇧🇷 BR 01 - xiaohe
   type: vless
-  server: 154.197.75.40
-  port: 8880
-  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+  server: 188.114.97.6
+  port: 2086
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false
   skip-cert-verify: true
@@ -16,18 +16,48 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: vms.lifetime37.workers.dev
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: 🇧🇷 BR 02 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 2082
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
+- name: 🇧🇷 BR 03 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 2082
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇧🇷 BR 01 - xiaohe
+  - 🇧🇷 BR 02 - xiaohe
+  - 🇧🇷 BR 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇧🇷 BR 01 - xiaohe
+  - 🇧🇷 BR 02 - xiaohe
+  - 🇧🇷 BR 03 - xiaohe
 rules:
 - MATCH,PROXIES
