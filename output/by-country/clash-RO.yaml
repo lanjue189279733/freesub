@@ -13,6 +13,13 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: 🇷🇴 RO 02 - xiaohe
+  type: ss
+  server: bogging-eyeteeth-fly.freesocks.work
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: QFWzCw2uX9B9i6qAYeFBIE
+  udp: true
+- name: 🇷🇴 RO 03 - xiaohe
   type: vless
   server: edge10.cyrionflare.com
   port: 2052
@@ -20,7 +27,15 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: 🇷🇴 RO 03 - xiaohe
+- name: 🇷🇴 RO 04 - xiaohe
+  type: vless
+  server: roxnsk.color-shop.ir
+  port: 8080
+  uuid: e3026ffb-cde6-4cfe-b4b7-f76d5264e969
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇷🇴 RO 05 - xiaohe
   type: vless
   server: edge10.cyrionflare.com
   port: 2052
@@ -36,6 +51,8 @@ proxy-groups:
   - 🇷🇴 RO 01 - xiaohe
   - 🇷🇴 RO 02 - xiaohe
   - 🇷🇴 RO 03 - xiaohe
+  - 🇷🇴 RO 04 - xiaohe
+  - 🇷🇴 RO 05 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -44,5 +61,7 @@ proxy-groups:
   - 🇷🇴 RO 01 - xiaohe
   - 🇷🇴 RO 02 - xiaohe
   - 🇷🇴 RO 03 - xiaohe
+  - 🇷🇴 RO 04 - xiaohe
+  - 🇷🇴 RO 05 - xiaohe
 rules:
 - MATCH,PROXIES
